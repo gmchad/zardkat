@@ -1,4 +1,4 @@
-# zardkat
+# zardkat 🐱
 
 A [hardhat-circom](https://github.com/projectsophon/hardhat-circom) template to generate zero-knowledge circuits, proofs, and solidity verifiers
 
@@ -22,6 +22,8 @@ template Multiplier2 () {
 }
 component main = Multiplier2();
 ```
+### Install
+`npm i`
 
 ### Compile
 `npx hardhat compile` 
