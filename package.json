@@ -1,13 +1,13 @@
 {
-  "name": "hardhat-circom-template",
+  "name": "zardkat",
   "version": "1.0.0",
-  "description": "",
+  "description": "hardhat-circom template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "gmchad <chad@ethsd.org>",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
