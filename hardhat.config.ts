@@ -7,7 +7,6 @@ import circuits = require('./circuits.config.json')
 
 // set env var to the root of the project
 process.env.BASE_PATH = __dirname;
-console.log(process.env.BASE_PATH)
 
 // tasks
 import "./tasks/newcircuit.ts"
