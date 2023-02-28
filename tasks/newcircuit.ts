@@ -29,12 +29,12 @@ task("newcircuit", "Generate config for a new circuit")
 
     // create input and circuit files
     fs.closeSync(fs.openSync(DIR_PATH + taskArgs.name + "/input.json", 'w'))
-    fs.closeSync(fs.openSync(DIR_PATH + taskArgs.name + "/circom.circom", 'w'))
+    fs.closeSync(fs.openSync(DIR_PATH + taskArgs.name + "/circuit.circom", 'w'))
 
     // create a new circuit config
     const circuitConfig: CircomCircuitConfig = {
       name: taskArgs.name,
-      version: 1,
+      version: 2,
       protocol: "groth16",
       circuit: taskArgs.name + "/circuit.circom",
       input: taskArgs.name + "/input.json",
