@@ -26,7 +26,7 @@ component main = Multiplier2();
 `npm i`
 
 ### Compile
-`npx hardhat compile` 
+`npx hardhat circom` 
 This will generate the **out** file with circuit intermediaries and geneate the **MultiplierVerifier.sol** contract
 
 ### Prove and Deploy
