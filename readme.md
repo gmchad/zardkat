@@ -78,5 +78,5 @@ component main = Multiplier2();
       ### Check your transaction on Polygon Scan
 
 ### Authors
-Gauri Kauhsal
+Gauri Kaushal
    
