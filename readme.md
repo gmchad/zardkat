@@ -4,27 +4,24 @@ In this project I have created a circuit using ***circom*** programming langugae
 ## Circuit Code
 pragma circom 2.0.0;
 
-/*This circuit template checks that c is the multiplication of a and b.*/  
-
 template Multiplier2 () {  
-   //signal input
+   
    signal input a;
    signal input b;
    
-  //signals from gates
     signal x;
     signal y;
     
 
-    //final signal output
+   
    signal output Q;
-  //component gate used to create custom circuit
+  
     
      component and = AND();
      component not = NOT();
      component or = OR();
 
-  //circuit logic
+  
     and.a <== a;
     and.b <== b;
     x <== and.out;
