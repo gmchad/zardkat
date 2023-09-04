@@ -15,7 +15,9 @@
     "hardhat": "^2.12.7"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "hardhat-circom": "^3.3.2",
+    "node": "^18.17.1",
     "snarkjs": "^0.6.3"
   }
 }

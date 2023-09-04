@@ -19,8 +19,8 @@ This program is a simple contract written in circom, solidity,  a programming la
 ### Executing Program
 
 1. Inside the project directory, in the terminal type: npm i
-2. In same terminal type: npx hardhat circum
-3. This will generate the out file in the circuit folder and create our smart contract for the verification.
+2. In same terminal type: npx hardhat circom
+3. This will generate the out file in the circuit folder and create our Verifier smart contract for the verification.
 4. if you want to run it on the local host type on the terminal: npx hardhat run scripts/deploy.ts
 5. And if you want to deploy the contract on the test net to check the circuit.
 6. Add the private key of your wallet to which you want to state as the owner of the contract and deploy to the desired testnet as i am using mumbai in the walkthrough video.
