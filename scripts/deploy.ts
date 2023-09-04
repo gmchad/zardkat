@@ -13,7 +13,7 @@ interface ICallData {
   input: BigNumberish[];
 }
 
-const BASE_PATH = "./circuits/multiplier/";
+const BASE_PATH = "./circuits/MyCircuit/";
 
 function p256(n: any): BigNumber {
   let nstr = n.toString(16);
@@ -57,7 +57,7 @@ async function generateProof() {
 
   // calculate proof
   const proof = await snarkjs.groth16.prove(
-    BASE_PATH + "out/multiplier.zkey",
+    BASE_PATH + "out/MyCircuit.zkey",
     BASE_PATH + "out/circuit.wtns"
   )
 
@@ -69,7 +69,7 @@ async function generateProof() {
 
 async function main() {
   // deploy contract
-  const Verifier = await ethers.getContractFactory("./contracts/MultiplierVerifier.sol:Verifier");
+  const Verifier = await ethers.getContractFactory("./contracts/MyCircuitVerifier.sol:Verifier");
   const verifier = await Verifier.deploy();
   await verifier.deployed();
 
