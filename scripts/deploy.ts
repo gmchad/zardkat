@@ -13,7 +13,7 @@ interface ICallData {
   input: BigNumberish[];
 }
 
-const BASE_PATH = "./circuits/multiplier/";
+const BASE_PATH = "./circuits/neel/";
 
 function p256(n: any): BigNumber {
   let nstr = n.toString(16);
@@ -57,7 +57,7 @@ async function generateProof() {
 
   // calculate proof
   const proof = await snarkjs.groth16.prove(
-    BASE_PATH + "out/multiplier.zkey",
+    BASE_PATH + "out/neel.zkey",
     BASE_PATH + "out/circuit.wtns"
   )
 
@@ -69,19 +69,19 @@ async function generateProof() {
 
 async function main() {
   // deploy contract
-  const Verifier = await ethers.getContractFactory("./contracts/MultiplierVerifier.sol:Verifier");
+  const Verifier = await ethers.getContractFactory("./contracts/NeelVerifier.sol:Verifier");
   const verifier = await Verifier.deploy();
   await verifier.deployed();
 
   console.log(`Verifier deployed to ${verifier.address}`);
 
   // generate proof call data
-  const {pi_a, pi_b, pi_c, input} = await generateCallData();
+  const { pi_a, pi_b, pi_c, input } = await generateCallData();
 
   // verify proof on contract
   //@ts-ignore
   const tx = await verifier.verifyProof(pi_a, pi_b, pi_c, input)
-  
+
   console.log(`Verifier result: ${tx}`)
   console.assert(tx == true, "Proof verification failed!");
 
